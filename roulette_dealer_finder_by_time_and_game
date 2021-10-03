@@ -1,0 +1,34 @@
+#! /bin/sh
+echo "Please input the schedule you would like to analyze in the following format: date_Dealer_Schedule -- Then hit enter. (File must be in this script's directory)"
+
+read schedule
+
+cat $schedule | awk '{print $1,$2,$3,$4,$5,$6,$7,$8}'
+
+echo "Would you like to find a specific name, time or game? [name/time/game]"
+
+read option
+
+if [ $option = "time" ]; then
+	echo "Please enter the time in the following format: HH:MM"
+	read timeinput
+	cat $schedule | awk '{if(NR==1) print $0}'
+	grep $timeinput $schedule
+
+elif [ $option = "name" ]; then
+	echo "Please enter the name in the following format: John Doe"
+	read nameinput
+	cat $schedule | awk '{if(NR==1) print $0}'
+	grep -i $nameinput $schedule
+elif [ $option = "game" ]; then
+	echo "Which game would you like to search? BlackJack(01) Roulette(02) Texas Hold Em(03)"
+	read gamenumber
+	if [ $gamenumber = "01" ]; then 
+		cat $schedule | awk 'NR >= 2 && NR <= 250 {print $1,$2,$3,$4}' 
+	elif [ $gamenumber = "02" ]; then 
+		cat $schedule | awk 'NR >= 2 && NR <= 250 {print $1,$2,$5,$6}'
+	elif [ $gamenumber = "03" ]; then 
+		cat $schedule | awk 'NR >= 2 && NR <= 250 {print $1,$2,$7,$8}'
+	fi
+fi
+
