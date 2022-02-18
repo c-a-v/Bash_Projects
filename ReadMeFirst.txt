@@ -1,6 +1,6 @@
 ______________________________________________________________________________________________________________________
 
---------------------------------------------------READMEFIRST.txt----------------------------------------------------------
+--------------------------------------------------READMEFIRST.txt-----------------------------------------------------
 ______________________________________________________________________________________________________________________
 
 ____________________________________
@@ -11,15 +11,11 @@ ___________________________________|
 
 These scripts will only work on date_dealer_schedule files that are WITHIN the directory of the script.
 
-I included a couple copies to run the script with
-
-I worked on this for almost 5 hours after class out of sheer determination and stubborness..mostly stubborness.
-the amount of problems I ran into and the googling / troubleshooting it took to get this to work almost gave me a 
-stroke.
+I included a couple copies of date_dealer_schedules to run the script with
 
 Each variable has been tested and SHOULD WORK.
 
-**IF YOU RUN INTO AN ERROR**, p l e a s e leave me a comment. I would like to know where it failed and fix it.
+**IF YOU RUN INTO AN ERROR** please leave me a comment. I would like to know where it failed and fix it.
 
 Thank you very much
 
